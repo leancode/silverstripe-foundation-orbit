@@ -16,7 +16,8 @@
 	},
 	"require": {
 		"silverstripe/framework": ">=3.1",
-		"silverstripe/cms": ">=3.1"
+		"silverstripe/cms": ">=3.1",
+		"rywa/silverstripe-foundation":  ">=1.1" 
 	},
 	"extra": {
 		"installer-name": "orbit"
