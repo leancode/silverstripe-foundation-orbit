@@ -2,7 +2,7 @@
   "name": "leancode/silverstripe-foundation-orbit",
 	"description": "An image slider using the foundation framework for Silverstripe",
 	"type": "silverstripe-module",
-	"homepage": "http://github.com/leancode/silverstripe-orbit",
+	"homepage": "http://github.com/leancode/silverstripe-foundation-orbit",
 	"keywords": ["silverstripe", "foundation", "orbit"],
 	"license": "BSD-3-Clause",
 	"authors": [
