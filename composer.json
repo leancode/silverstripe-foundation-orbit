@@ -1,0 +1,24 @@
+{
+  "name": "leancode/silverstripe-foundation-orbit",
+	"description": "An image slider using the foundation framework for Silverstripe",
+	"type": "silverstripe-module",
+	"homepage": "http://github.com/leancode/silverstripe-orbit",
+	"keywords": ["silverstripe", "foundation", "orbit"],
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Dominic O'Brien",
+			"email": "leancode@gmail.com"
+		}
+	],
+	"support": {
+		"issues": "http://github.com/leancode/silverstripe-foundation-orbit/issues"
+	},
+	"require": {
+		"silverstripe/framework": ">=3.1",
+		"silverstripe/cms": ">=3.1"
+	},
+	"extra": {
+		"installer-name": "orbit"
+	}
+}
