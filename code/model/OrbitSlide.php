@@ -1,6 +1,7 @@
 <?php
 
-class OrbitSlide extends DataObject {
+class OrbitSlide extends DataObject
+{
 
     private static $db = array(
         'Title'     => 'Varchar(99)',
@@ -23,17 +24,20 @@ class OrbitSlide extends DataObject {
 
     private static $default_sort = "Sort DESC";
 
-    public function getSizedImage() {
+    public function getSizedImage()
+    {
         $width = $this->Parent()->OrbitWidth;
         $height = $this->Parent()->OrbitHeight;
 
-        if($width && $height)
+        if ($width && $height) {
             return $this->Image()->croppedImage($width, $height);
-        else
+        } else {
             return false;
+        }
     }
 
-    public function getCMSFields() {
+    public function getCMSFields()
+    {
         $fields = parent::getCMSFields();
 
         $fields->removeByName('ParentID');
@@ -41,10 +45,12 @@ class OrbitSlide extends DataObject {
         return $fields;
     }
 
-    public function getThumbnail() {
-        if($this->Image())
+    public function getThumbnail()
+    {
+        if ($this->Image()) {
             return $this->Image()->CMSThumbnail();
-        else
+        } else {
             return '(No Image)';
+        }
     }
 }

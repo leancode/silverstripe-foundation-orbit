@@ -1,6 +1,7 @@
 <?php
 
-class OrbitPage extends DataExtension {
+class OrbitPage extends DataExtension
+{
     private static $db = array(
         'ShowOrbit'  => 'Boolean',
         'OrbitWidth' => 'Int',
@@ -16,9 +17,9 @@ class OrbitPage extends DataExtension {
         'OrbitHeight' => 350
     );
 
-    public function updateCMSFields(FieldList $fields) {
-
-        if($this->owner->ShowOrbit) {
+    public function updateCMSFields(FieldList $fields)
+    {
+        if ($this->owner->ShowOrbit) {
             // Create add button
             $add_button = new GridFieldAddNewButton('toolbar-header-left');
             $add_button->setButtonName('Add Slide');
@@ -43,7 +44,8 @@ class OrbitPage extends DataExtension {
         parent::updateCMSFields($fields);
     }
 
-    public function updateSettingsFields(FieldList $fields) {
+    public function updateSettingsFields(FieldList $fields)
+    {
         $message = '<p>Configure this page to use an image slider</p>';
         $fields->addFieldToTab('Root.Settings', LiteralField::create("OrbitMessage", $message));
 
@@ -53,13 +55,14 @@ class OrbitPage extends DataExtension {
 
         $fields->addFieldToTab('Root.Settings', $orbit);
 
-        if($this->owner->ShowOrbit) {
+        if ($this->owner->ShowOrbit) {
             $fields->addFieldToTab('Root.Settings', NumericField::create('OrbitWidth', 'Width'));
             $fields->addFieldToTab('Root.Settings', NumericField::create('OrbitHeight', 'Height'));
         }
     }
 
-    public function OrbitSlides() {
+    public function OrbitSlides()
+    {
         return $this->owner->renderWith('OrbitSlides', array('Slides' => $this->owner->Slides()));
     }
 }
